@@ -1,7 +1,7 @@
 Final Assignment
 ================
 
-This content was created as a pre requisite of our Final Assignment for our Digital Media class at UOIT. For this assignment we are required to use some javascript libraries: [jQuery][1], [three.js][2] and [AngularJS][3] and also run a [node.js][4] server. To complete this assignment we follow some tutorials around the internet, tips and lectures from our Instructor and TA, the libraies documentation, and also ours previous knowledge. Our project is performing each action requested for the final assignment.
+This content was created as a pre requisite of our Final Assignment for our Digital Media course at UOIT. For this assignment we are required to use some javascript libraries: [jQuery][1], [three.js][2] and [AngularJS][3] and also run a [node.js][4] server. To complete this assignment we follow some tutorials around the internet, tips and lectures from our Instructor and TA, the libraies documentation, and also ours previous knowledge. Our project is performing each action requested for the final assignment.
 - It communicate with a local node.js server running the server.js program;
 - It is possible connect and disconnect to the server;
 - It lists all available models on the server;
