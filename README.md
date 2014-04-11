@@ -19,7 +19,7 @@ This project are available under the GNU General Public License (GNU GPL). Pleas
 4. Click on the Connect button to start;
 5. You can interact with the models that are already available or upload new ones.
 
-**PS.:** *You also can delete pre-existent models. Just hover the model name and click on the recycle bin*
+__*PS.: You also can delete pre-existent models. Just hover the model name and click on the recycle bin*__
 
 ### Students
 
