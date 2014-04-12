@@ -1,0 +1,91 @@
+<!doctype html>
+<html ng-app='finalAssignment'>
+
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Final Assignment</title>
+
+    <link rel="stylesheet" src="css/normalize.min.css" />
+    <link href='http://fonts.googleapis.com/css?family=Norican' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css"/>
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!-- Include jQuery -->
+    <script src="js_lib/jquery.min.js"></script>
+    
+    <!-- Include libraries to handle Objects -->
+    <script src="js_lib/three.min.js"></script>
+    <script src="js_lib/TrackballControls.js"></script>
+    <script src="js_lib/JSONLoader.js"></script>
+    
+    <!-- Include libraries to work with AngularJS -->
+    <script src="js_lib/angular.min.js"></script>
+
+    <!-- Include the main Java script source. -->
+    <script src="js_include/final.js"></script>
+    <script src="js_include/app.js"></script>
+  </head>
+
+  <body lang="en">
+    <header>
+      Final Assignment
+    </header>
+    
+    <aside>
+      <!-- Connection button section -->
+      <section id="connection">
+        <input id="connect" type="button" value="Connect">
+        <input id="disconnect" class="deactivated" type="button" value="Disconnect">
+        
+        <div class="error">
+          Server Offline!
+        </div>
+      </section>
+      <hr/>
+	  
+      <!-- Upload container section -->
+      <section id="uploadContainer" ng-controller="modelsCtrl">
+        <div class="filename" id="filename">No file selected</div>
+        <!--<div class="filename" ng-show="filename" ng-bind="message"></div>-->
+        <div class="ovrrBtn">
+          Choose model
+          <input type="file" class="btnUpload" accept=".js" id="btnUpload" file-model="myFile"/>
+        </div>
+        <a href="#" id="save" class="ovrrBtn save" ng-click="uploadFile()">Save</a>
+      </section>
+      
+      <hr/>
+      
+      <!-- List model section -->
+      <section id="models">
+        <h2>
+          Models:
+        </h2>       
+        <ul id="modelsList" ng-controller="modelsCtrl">
+          <li ng-repeat="model in models" ng-class="{selected:checkCurrentModel(model.name)}" class="model">
+            <a ng-click="deleteModel($event, this, model.name)"><img src="img/delete.png" alt="Delete {{model.name}}"/></a>
+            <span ng-click="loadModel($event, model.name)" class="model">{{model.name}}</span>
+          </li>
+        </ul>
+      </section>
+    </aside>
+    
+    <!-- Where shows the selected model -->
+    <main>
+      <div id="container">
+      </div>
+    </main>
+    
+    <!-- Students name showed in the footer -->
+    <footer>
+      Students: Filipe Araujo, Igor Melo, and Paula Fiorini
+    </footer>
+  </body>
+
+</html>
